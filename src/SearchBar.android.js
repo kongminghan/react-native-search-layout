@@ -28,7 +28,7 @@ class SearchBar extends React.PureComponent {
           ref={view => {
             this._textInput = view
           }}
-          placeholder="Search"
+          placeholder={this.props.placeholder}
           placeholderTextColor={this.props.placeholderTextColor || '#ccc'}
           value={this.state.text}
           autoCapitalize="none"
@@ -37,6 +37,7 @@ class SearchBar extends React.PureComponent {
           underlineColorAndroid={this.props.underlineColorAndroid || '#ccc'}
           onSubmitEditing={this._handleSubmit}
           onChangeText={this._handleChangeText}
+          returnKeyType="search"
           style={[styles.searchInput, searchInputStyle]}
         />
         <View
