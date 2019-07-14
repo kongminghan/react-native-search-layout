@@ -21,7 +21,7 @@ const APPBAR_HEIGHT = Platform.OS === 'ios' ? 50 : 56
 const TITLE_OFFSET = Platform.OS === 'ios' ? 70 : 56
 
 class Header extends React.PureComponent {
-  constructor (props) {
+  constructor(props) {
     super(props)
 
     // @todo: this is static and we don't know if it's visible or not on iOS.
@@ -48,7 +48,7 @@ class Header extends React.PureComponent {
         shadowOffset: {
           height: StyleSheet.hairlineWidth
         },
-        elevation: 1
+        elevation: 0
       }
     }
 
@@ -105,12 +105,12 @@ class Header extends React.PureComponent {
 
     return (
       <BorderlessButton onPress={this._navigateBack}>
-        <HeaderButton color={'#04AFEC'} iconName='left' />
+        <HeaderButton color={'#04AFEC'} iconName="left" />
       </BorderlessButton>
     )
   }
 
-  render () {
+  render() {
     const { styles } = this
     const headerStyle = {}
     if (this.props.backgroundColor) {
